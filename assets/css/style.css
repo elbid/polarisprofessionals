@@ -244,3 +244,13 @@ svg use, symbol polygon { fill: currentColor; }
   html { scroll-behavior: auto; }
   .cielo-sfondo circle { animation: none; }
 }
+
+/* Link LinkedIn nelle schede membro */
+.membro-link {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; align-self: flex-start;
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  text-decoration: none; color: var(--polare);
+  border-bottom: 1px solid var(--filo); padding-bottom: 3px; transition: border-color .2s, color .2s;
+}
+.membro-link svg { width: 14px; height: 14px; fill: currentColor; }
+.membro-link:hover { color: var(--ottone); border-bottom-color: var(--ottone); }
