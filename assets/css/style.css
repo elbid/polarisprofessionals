@@ -1,0 +1,273 @@
+/* ==========================================================================
+   Polaris – Policy-minded professionals
+   Identità visiva: vedi /brand/ per palette, caratteri e regole d'uso.
+   ========================================================================== */
+
+:root {
+  /* Palette */
+  --polare: #0C2F4A;        /* blu del logo: testo, marchio, sfondi principali */
+  --notte: #071D2F;         /* blu notte: hero e piè di pagina */
+  --avorio: #FAF7F2;        /* sfondo del logo: carta principale */
+  --pergamena: #F1ECE3;     /* sfondo alternato delle sezioni */
+  --bruma: #A9BED1;         /* azzurro freddo: linee, ritratti, dettagli */
+  --ottone: #C29B57;        /* accento caldo: la luce della stella, usato con parsimonia */
+  --ottone-chiaro: #E3C68E; /* accento su sfondi scuri */
+  --inchiostro-2: #4A5D6E;  /* testo secondario */
+  --filo: rgba(12, 47, 74, .14);
+
+  /* Caratteri */
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+
+  --larghezza: 1200px;
+  --margine: clamp(20px, 5vw, 56px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  margin: 0;
+  background: var(--avorio);
+  color: var(--polare);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; }
+p { margin: 0 0 1em; }
+em { font-style: italic; }
+svg use, symbol polygon { fill: currentColor; }
+
+.contenitore { max-width: var(--larghezza); margin: 0 auto; padding: 0 var(--margine); }
+
+.salta {
+  position: absolute; left: -9999px; top: 8px;
+  background: var(--polare); color: var(--avorio); padding: 8px 14px; z-index: 100;
+}
+.salta:focus { left: 8px; }
+
+:focus-visible { outline: 2px solid var(--ottone); outline-offset: 3px; }
+
+/* --------------------------------------------------------------------------
+   Testata
+   -------------------------------------------------------------------------- */
+.testata {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 247, 242, .88);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--filo);
+}
+.testata-riga { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+
+.marchio { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--polare); }
+.marchio-stella { width: 30px; height: 30px; }
+.marchio-nome { font-weight: 700; font-size: 21px; letter-spacing: .04em; line-height: 1; }
+
+.menu { display: flex; gap: clamp(18px, 3vw, 40px); }
+.menu a {
+  text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color .2s;
+}
+.menu a:hover { border-bottom-color: var(--polare); }
+
+/* --------------------------------------------------------------------------
+   Hero: cielo notturno con la costellazione dei membri
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 85% 10%, #123A5A 0%, rgba(18, 58, 90, 0) 60%),
+    var(--notte);
+  color: var(--avorio);
+  min-height: min(88vh, 820px);
+  display: flex; align-items: flex-end;
+  padding: 120px 0 clamp(64px, 10vh, 112px);
+}
+.cielo {
+  position: absolute; right: max(-80px, calc((100vw - var(--larghezza)) / 2 - 110px)); top: 6%;
+  width: min(46vw, 600px); height: auto;
+  pointer-events: none;
+}
+.cielo-polare { color: var(--avorio); filter: drop-shadow(0 0 18px rgba(227, 198, 142, .55)); }
+.cielo-sfondo circle { animation: scintilla 6s ease-in-out infinite; }
+.cielo-sfondo circle:nth-child(3n) { animation-delay: -2s; }
+.cielo-sfondo circle:nth-child(5n) { animation-delay: -4s; animation-duration: 8s; }
+@keyframes scintilla { 50% { opacity: .08; } }
+
+.hero-testo { position: relative; width: 100%; }
+.occhiello {
+  font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ottone-chiaro); margin-bottom: 28px;
+  display: flex; align-items: center; gap: 14px;
+}
+.occhiello::before { content: ""; width: 36px; height: 1px; background: currentColor; }
+.hero h1 {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(44px, 7.2vw, 96px); line-height: 1.02; letter-spacing: -.015em;
+  max-width: 8.6em;
+}
+.hero h1 em { color: var(--ottone-chiaro); font-weight: 300; }
+.hero-sotto { max-width: 36em; margin-top: 32px; font-size: clamp(17px, 1.6vw, 20px); color: rgba(250, 247, 242, .78); }
+.freccia {
+  display: inline-flex; gap: 10px; margin-top: 20px;
+  font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  text-decoration: none; border-bottom: 1px solid rgba(250, 247, 242, .4); padding-bottom: 4px;
+}
+.freccia:hover { border-bottom-color: var(--ottone-chiaro); color: var(--ottone-chiaro); }
+
+/* --------------------------------------------------------------------------
+   Sezioni
+   -------------------------------------------------------------------------- */
+.sezione { padding: clamp(80px, 12vw, 148px) 0; }
+.sezione-carta { background: var(--pergamena); }
+
+.griglia-sezione { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start; }
+
+.etichetta {
+  font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  padding-top: 12px; border-top: 1px solid var(--polare);
+  position: sticky; top: 100px;
+}
+.etichetta span { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; font-size: 16px; margin-right: 8px; color: var(--ottone); }
+
+.lead {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(26px, 3vw, 38px); line-height: 1.25; letter-spacing: -.005em;
+  margin-bottom: 48px;
+}
+.colonne { columns: 2 300px; column-gap: 48px; color: var(--inchiostro-2); }
+.colonne p { break-inside: avoid; }
+
+.titolo-sezione {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(32px, 4.4vw, 58px); line-height: 1.08; letter-spacing: -.01em;
+  max-width: 15em;
+}
+.titolo-sezione em { color: var(--ottone); }
+.intro { margin-top: 24px; max-width: 34em; color: var(--inchiostro-2); }
+
+/* Pilastri */
+.pilastri {
+  list-style: none; padding: 0; margin: 64px 0 0;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--filo);
+}
+.pilastri li { padding: 32px 28px 8px 0; }
+.pilastri li + li { padding-left: 28px; border-left: 1px solid var(--filo); }
+.pilastri svg { width: 22px; height: 22px; color: var(--ottone); margin-bottom: 18px; }
+.pilastri h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; margin-bottom: 8px; }
+.pilastri p { font-size: 15.5px; color: var(--inchiostro-2); }
+
+/* Tortuga */
+.tortuga {
+  margin-top: 64px; padding: 36px 40px;
+  background: var(--polare); color: var(--avorio);
+  display: grid; grid-template-columns: 220px 1fr; gap: 32px;
+}
+.tortuga-titolo { font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1.2; color: var(--ottone-chiaro); }
+.tortuga p:last-child { margin: 0; color: rgba(250, 247, 242, .86); }
+.tortuga a { color: var(--avorio); text-decoration-color: var(--ottone-chiaro); text-underline-offset: 3px; }
+
+/* Temi */
+.temi {
+  list-style: none; padding: 0; margin: 56px 0 0;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--polare);
+}
+.tema { padding: 28px 28px 36px 0; border-bottom: 1px solid var(--filo); }
+.tema:not(:nth-child(3n+1)) { padding-left: 28px; border-left: 1px solid var(--filo); }
+.tema-num { font-family: var(--serif); font-style: italic; color: var(--ottone); font-size: 18px; }
+.tema h3 { font-family: var(--serif); font-weight: 400; font-size: 25px; line-height: 1.15; margin: 14px 0 12px; }
+.tema p { font-size: 15.5px; color: var(--inchiostro-2); margin: 0; }
+
+/* Membri */
+.membri {
+  list-style: none; padding: 0; margin: 72px 0 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 56px 36px;
+}
+.membro { display: flex; flex-direction: column; }
+.ritratto {
+  position: relative; width: 132px; height: 132px; border-radius: 50%; overflow: hidden;
+  background: var(--bruma); margin-bottom: 22px;
+  box-shadow: 0 0 0 1px var(--filo), 0 0 0 6px var(--avorio), 0 0 0 7px var(--filo);
+}
+/* Bicromia: le foto diventano monocrome e prendono il tono "bruma" del marchio */
+.ritratto img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(1) contrast(1.08) brightness(1.04);
+  mix-blend-mode: multiply;
+  transition: filter .4s, mix-blend-mode .4s;
+}
+.membro:hover .ritratto img { filter: none; mix-blend-mode: normal; }
+.iniziali {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: var(--serif); font-style: italic; font-size: 44px; color: var(--polare);
+}
+.membro-nome { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.15; }
+.membro-nome span { font-weight: 500; }
+.membro-aff {
+  font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ottone); margin: 8px 0 12px;
+}
+.membro-bio { font-size: 14.5px; line-height: 1.6; color: var(--inchiostro-2); margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Piè di pagina
+   -------------------------------------------------------------------------- */
+.piede { background: var(--notte); color: var(--avorio); padding: 72px 0 48px; }
+.piede-riga { display: grid; grid-template-columns: 1fr 1.4fr; gap: 32px 48px; align-items: end; }
+.piede-marchio { display: flex; align-items: center; gap: 18px; }
+.piede-marchio svg { width: 52px; height: 52px; color: var(--avorio); }
+.piede-nome { font-weight: 700; font-size: 28px; letter-spacing: .04em; margin: 0; line-height: 1; }
+.piede-tag { font-size: 14px; margin: 6px 0 0; color: rgba(250, 247, 242, .7); }
+.piede-frase { font-family: var(--serif); font-weight: 300; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.2; margin: 0; justify-self: end; text-align: right; max-width: 15em; }
+.piede-note {
+  grid-column: 1 / -1; margin: 32px 0 0; padding-top: 24px;
+  border-top: 1px solid rgba(250, 247, 242, .16);
+  font-size: 13px; color: rgba(250, 247, 242, .6);
+}
+.piede-note a { color: rgba(250, 247, 242, .85); }
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .griglia-sezione { grid-template-columns: 1fr; gap: 28px; }
+  .etichetta { position: static; max-width: 220px; }
+  .temi { grid-template-columns: repeat(2, 1fr); }
+  .tema:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+  .tema:nth-child(2n) { padding-left: 28px; border-left: 1px solid var(--filo); }
+  .tortuga { grid-template-columns: 1fr; gap: 12px; padding: 32px; }
+  .cielo { opacity: .55; width: 80vw; right: -14vw; top: 4%; }
+  .hero h1 { max-width: 11em; }
+}
+@media (max-width: 680px) {
+  body { font-size: 16px; }
+  .menu { gap: 16px; }
+  .menu a { font-size: 12px; letter-spacing: .04em; }
+  .marchio-nome { font-size: 18px; }
+  .marchio-stella { width: 24px; height: 24px; }
+  .pilastri { grid-template-columns: 1fr; }
+  .pilastri li, .pilastri li + li { padding: 24px 0 4px; border-left: 0; }
+  .pilastri li + li { border-top: 1px solid var(--filo); }
+  .temi { grid-template-columns: 1fr; }
+  .tema:nth-child(n) { padding-left: 0; border-left: 0; }
+  .membri { grid-template-columns: 1fr; gap: 44px; }
+  .piede-riga { grid-template-columns: 1fr; }
+  .piede-frase { justify-self: start; text-align: left; }
+  .cielo { width: 120vw; right: -40vw; top: 2%; opacity: .45; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cielo-sfondo circle { animation: none; }
+}
