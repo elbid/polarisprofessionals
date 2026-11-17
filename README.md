@@ -48,7 +48,7 @@ In `index.html` ogni membro è un blocco `<li class="membro">`. Copia un blocco,
 
 ## Dominio
 
-Il file `CNAME` contiene `polarisprofessionals.it`. Nella zona DNS del dominio (Netsons) servono:
+Il file `CNAME` contiene `www.polarisprofessionals.it` (dominio principale; GitHub reindirizza `polarisprofessionals.it` su www). Nella zona DNS del dominio (Netsons) servono:
 
 | Tipo | Nome | Valore |
 |---|---|---|
@@ -58,4 +58,4 @@ Il file `CNAME` contiene `polarisprofessionals.it`. Nella zona DNS del dominio (
 | A | @ | 185.199.111.153 |
 | CNAME | www | `elbid.github.io.` |
 
-Poi in **Settings → Pages** del repository: sorgente `main` / root, dominio `polarisprofessionals.it`, e quando il certificato è pronto spunta **Enforce HTTPS**.
+Poi in **Settings → Pages** del repository: sorgente `main` / root, dominio `www.polarisprofessionals.it`, e quando il certificato è pronto spunta **Enforce HTTPS**.
