@@ -166,28 +166,6 @@ svg use, symbol polygon { fill: currentColor; }
 .pilastri h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; margin-bottom: 8px; }
 .pilastri p { font-size: 15.5px; color: var(--inchiostro-2); }
 
-/* Tortuga */
-.tortuga {
-  margin-top: 64px; padding: 36px 40px;
-  background: var(--polare); color: var(--avorio);
-  display: grid; grid-template-columns: 220px 1fr; gap: 32px;
-}
-.tortuga-titolo { font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1.2; color: var(--ottone-chiaro); }
-.tortuga p:last-child { margin: 0; color: rgba(250, 247, 242, .86); }
-.tortuga a { color: var(--avorio); text-decoration-color: var(--ottone-chiaro); text-underline-offset: 3px; }
-
-/* Temi */
-.temi {
-  list-style: none; padding: 0; margin: 56px 0 0;
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--polare);
-}
-.tema { padding: 28px 28px 36px 0; border-bottom: 1px solid var(--filo); }
-.tema:not(:nth-child(3n+1)) { padding-left: 28px; border-left: 1px solid var(--filo); }
-.tema-num { font-family: var(--serif); font-style: italic; color: var(--ottone); font-size: 18px; }
-.tema h3 { font-family: var(--serif); font-weight: 400; font-size: 25px; line-height: 1.15; margin: 14px 0 12px; }
-.tema p { font-size: 15.5px; color: var(--inchiostro-2); margin: 0; }
-
 /* Membri */
 .membri {
   list-style: none; padding: 0; margin: 72px 0 0;
@@ -212,6 +190,7 @@ svg use, symbol polygon { fill: currentColor; }
   position: absolute; inset: 0; display: grid; place-items: center;
   font-family: var(--serif); font-style: italic; font-size: 44px; color: var(--polare);
 }
+.ritratto:has(img) .iniziali { display: none; }
 .membro-nome { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.15; }
 .membro-nome span { font-weight: 500; }
 .membro-aff {
@@ -243,10 +222,6 @@ svg use, symbol polygon { fill: currentColor; }
 @media (max-width: 960px) {
   .griglia-sezione { grid-template-columns: 1fr; gap: 28px; }
   .etichetta { position: static; max-width: 220px; }
-  .temi { grid-template-columns: repeat(2, 1fr); }
-  .tema:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
-  .tema:nth-child(2n) { padding-left: 28px; border-left: 1px solid var(--filo); }
-  .tortuga { grid-template-columns: 1fr; gap: 12px; padding: 32px; }
   .cielo { opacity: .55; width: 80vw; right: -14vw; top: 4%; }
   .hero h1 { max-width: 11em; }
 }
@@ -259,8 +234,6 @@ svg use, symbol polygon { fill: currentColor; }
   .pilastri { grid-template-columns: 1fr; }
   .pilastri li, .pilastri li + li { padding: 24px 0 4px; border-left: 0; }
   .pilastri li + li { border-top: 1px solid var(--filo); }
-  .temi { grid-template-columns: 1fr; }
-  .tema:nth-child(n) { padding-left: 0; border-left: 0; }
   .membri { grid-template-columns: 1fr; gap: 44px; }
   .piede-riga { grid-template-columns: 1fr; }
   .piede-frase { justify-self: start; text-align: left; }
