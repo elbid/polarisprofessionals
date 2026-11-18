@@ -38,7 +38,7 @@ Finché manca la foto, il sito mostra le iniziali. Per aggiungerla basta caricar
 | Lorenzo Ruffino | `ruffino-lorenzo.jpg` |
 | Matteo Sartori | `sartori-matteo.jpg` |
 | Andrea Silvagni | `silvagni-andrea.jpg` |
-| Alessandro Zhou | `zhou-alessandro.jpg` |
+| Alessandro Infelise Zhou | `infelise-zhou-alessandro.jpg` |
 
 Indicazioni: foto quadrata, almeno 400×400 px, viso centrato, formato `.jpg`. Il colore non conta: il sito le rende tutte monocrome nel tono del marchio (a colori al passaggio del mouse).
 
