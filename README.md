@@ -44,7 +44,7 @@ Indicazioni: foto quadrata, almeno 400×400 px, viso centrato, formato `.jpg`. I
 
 ## Aggiungere o modificare un membro
 
-In `index.html` ogni membro è un blocco `<li class="membro">`. Copia un blocco, cambia iniziali, nome, affiliazione, bio e nome del file della foto. Per il profilo LinkedIn aggiungi, dopo la bio, un link `<a class="membro-link" href="…">` come quelli già presenti. Aggiorna anche il numero nel titolo della sezione ("17 professionisti").
+In `index.html` ogni membro è un blocco `<li class="membro">`. Copia un blocco, cambia iniziali, nome, affiliazione, bio e nome del file della foto. Per il profilo LinkedIn aggiungi, dopo la bio, un link `<a class="membro-link" href="…">` come quelli già presenti.
 
 ## Dominio
 

@@ -111,8 +111,8 @@ svg use, symbol polygon { fill: currentColor; }
 .occhiello::before { content: ""; width: 36px; height: 1px; background: currentColor; }
 .hero h1 {
   font-family: var(--serif); font-weight: 300;
-  font-size: clamp(44px, 7.2vw, 96px); line-height: 1.02; letter-spacing: -.015em;
-  max-width: 8.6em;
+  font-size: clamp(40px, 6vw, 80px); line-height: 1.04; letter-spacing: -.015em;
+  max-width: 10em;
 }
 .hero h1 em { color: var(--ottone-chiaro); font-weight: 300; }
 .hero-sotto { max-width: 36em; margin-top: 32px; font-size: clamp(17px, 1.6vw, 20px); color: rgba(250, 247, 242, .78); }
@@ -126,7 +126,8 @@ svg use, symbol polygon { fill: currentColor; }
 /* --------------------------------------------------------------------------
    Sezioni
    -------------------------------------------------------------------------- */
-.sezione { padding: clamp(80px, 12vw, 148px) 0; }
+.sezione { padding: clamp(56px, 7vw, 96px) 0; }
+.sezione + .sezione { padding-top: 0; }
 .sezione-carta { background: var(--pergamena); }
 
 .griglia-sezione { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start; }
@@ -168,7 +169,7 @@ svg use, symbol polygon { fill: currentColor; }
 
 /* Membri */
 .membri {
-  list-style: none; padding: 0; margin: 72px 0 0;
+  list-style: none; padding: 0; margin: 56px 0 0;
   display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 56px 36px;
 }
