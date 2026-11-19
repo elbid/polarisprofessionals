@@ -262,13 +262,6 @@ svg use, symbol polygon { fill: currentColor; }
 .membro-link:hover { color: var(--ottone); border-bottom-color: var(--ottone); }
 
 /* Adesione solo su invito */
-.hero-azioni { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; margin-top: 20px; }
-.hero-azioni .freccia { margin-top: 0; }
-.hero-invito {
-  margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-  color: rgba(250, 247, 242, .6);
-}
-.hero-invito::before { content: "✦"; margin-right: 10px; color: var(--ottone-chiaro); }
 .invito {
   margin-top: 48px; padding: 22px 26px;
   display: flex; gap: 18px; align-items: flex-start;
