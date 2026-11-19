@@ -3,6 +3,11 @@
    Identità visiva: vedi /brand/ per palette, caratteri e regole d'uso.
    ========================================================================== */
 
+/* Caratteri ospitati sul sito (nessuna richiesta a server esterni) */
+@font-face { font-family: "Manrope"; src: url("../fonts/manrope.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader-italic.woff2") format("woff2"); font-weight: 200 800; font-style: italic; font-display: swap; }
+
 :root {
   /* Palette */
   --polare: #0C2F4A;        /* blu del logo: testo, marchio, sfondi principali */
@@ -255,3 +260,35 @@ svg use, symbol polygon { fill: currentColor; }
 }
 .membro-link svg { width: 14px; height: 14px; fill: currentColor; }
 .membro-link:hover { color: var(--ottone); border-bottom-color: var(--ottone); }
+
+/* Adesione solo su invito */
+.hero-azioni { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; margin-top: 20px; }
+.hero-azioni .freccia { margin-top: 0; }
+.hero-invito {
+  margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(250, 247, 242, .6);
+}
+.hero-invito::before { content: "✦"; margin-right: 10px; color: var(--ottone-chiaro); }
+.invito {
+  margin-top: 48px; padding: 22px 26px;
+  display: flex; gap: 18px; align-items: flex-start;
+  border: 1px solid var(--filo); border-left: 3px solid var(--ottone); background: #fff;
+}
+.invito svg { flex: none; width: 20px; height: 20px; margin-top: 3px; color: var(--ottone); }
+.invito p { margin: 0; color: var(--inchiostro-2); }
+.invito strong { color: var(--polare); font-family: var(--serif); font-weight: 500; font-size: 19px; margin-right: 4px; }
+
+/* Ruolo nel network (fondatore, cofondatore) */
+.membro-ruolo {
+  align-self: flex-start; margin: 0 0 10px;
+  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--polare); border: 1px solid var(--ottone); padding: 3px 10px 2px;
+}
+
+/* Pagine di testo (privacy) */
+.testo { max-width: 46em; }
+.testo h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(36px, 5vw, 56px); line-height: 1.08; margin-bottom: 12px; }
+.testo h2 { font-family: var(--serif); font-weight: 400; font-size: 25px; margin: 44px 0 10px; }
+.testo p, .testo li { color: var(--inchiostro-2); }
+.testo ul { padding-left: 20px; }
+.testo .aggiornato { font-size: 14px; color: var(--inchiostro-2); }
