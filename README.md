@@ -8,7 +8,6 @@ Nessuna dipendenza né build: è HTML e CSS puro. Modifichi un file, fai commit 
 
 ```
 index.html            la pagina del sito
-brand/index.html      guida all'identità visiva (palette, caratteri, art direction)
 assets/css/style.css  tutti gli stili; i colori sono variabili in cima al file
 assets/img/           logo e stella
 assets/membri/        foto dei membri (vedi sotto)
