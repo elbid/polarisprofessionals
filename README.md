@@ -33,7 +33,7 @@ Finché manca la foto, il sito mostra le iniziali. Per aggiungerla basta caricar
 | Andrea Gorga | `gorga-andrea.jpg` |
 | Nicola Lipari | `lipari-nicola.jpg` |
 | Francesco Olivanti | `olivanti-francesco.jpg` |
-| Marco Palladino | `palladino-marco.jpg` |
+| Marco G. Palladino | `palladino-marco-g.jpg` |
 | Lorenzo Ruffino | `ruffino-lorenzo.jpg` |
 | Matteo Sartori | `sartori-matteo.jpg` |
 | Andrea Silvagni | `silvagni-andrea.jpg` |
